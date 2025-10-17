@@ -7,7 +7,7 @@ int main()
    char FirstName[50], LN[50], gender[50];
    char operation;
    double num1, num2;
-   double result; // Variable to store the calculation result
+   double result; 
    int age;
    
    printf("Name: Kyle H. Micarandayo\n") ;
@@ -16,9 +16,9 @@ int main()
    printf("---------PROGRAM--------\n\n");
    
    printf("Type any key to Continue: ") ;
-   // Note: scanf("%s", enter) is fine here to read the "any key" input
+   
    if (scanf("%s", enter) != 1) { 
-       // Basic error checking, though optional for this simple program
+      
        return 1;
    }
    

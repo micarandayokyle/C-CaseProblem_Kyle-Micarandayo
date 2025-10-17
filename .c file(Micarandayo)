@@ -1,0 +1,82 @@
+#include<stdio.h>
+#include<string.h>
+
+int main() 
+{
+   char enter[100];
+   char FirstName[50], LN[50], gender[50];
+   char operation;
+   double num1, num2;
+   double result; // Variable to store the calculation result
+   int age;
+   
+   printf("Name: Kyle H. Micarandayo\n") ;
+   printf("ID Number: 2024303664\n");
+   printf("Course: BSIT - 1B\n");
+   printf("---------PROGRAM--------\n\n");
+   
+   printf("Type any key to Continue: ") ;
+   // Note: scanf("%s", enter) is fine here to read the "any key" input
+   if (scanf("%s", enter) != 1) { 
+       // Basic error checking, though optional for this simple program
+       return 1;
+   }
+   
+   printf("--------HELLO USER---------\n\n");
+   printf("Please Log-in First to Procide\n\n");
+   printf("-------LOG-IN-------\n\n");
+   printf("Enter Your First Name: ");
+   scanf("%s", FirstName);
+   printf("Enter Your Last Name: ");
+   scanf("%s", LN);
+   printf("Enter  your Gender (Male, Female): ");
+   scanf("%s", gender);
+   printf("Enter your age: ");
+   scanf("%d", &age);
+       
+         printf("---------USER--------\n");
+         printf("First Name: %s\n", FirstName);
+         printf("Last Name: %s\n", LN);
+         printf("Gender: %s\n", gender);
+         printf("Age: %d\n\n", age);
+         
+             printf("-----Calculator------\n");
+             
+             printf("Enter an operator(+,-,*,/): ");
+             scanf(" %c", &operation); 
+       
+             printf("Enter the first number: ");
+             scanf("%lf", &num1); 
+             printf("Enter the second number: ");
+             scanf("%lf", &num2);
+
+   switch (operation) {
+      case '+':
+         result = num1 + num2;
+         printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
+         break;
+      case '-':
+         result = num1 - num2;
+         printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
+         break;
+      case '*':
+         result = num1 * num2;
+         printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
+         break;
+      case '/':
+         if (num2 != 0) {
+            result = num1 / num2;
+            printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
+         } else {
+            printf("Error: Division by zero is not allowed.\n");
+         }
+         break;
+ 
+      default:
+         printf("Error: Invalid operator entered.\n");
+   }
+   printf("\n---------PROGRAM END---------\n");
+   
+   return 0;
+}
+    
